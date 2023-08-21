@@ -198,6 +198,7 @@ public class Home extends javax.swing.JFrame {
         jButton36 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(new javax.swing.ImageIcon(getClass().getResource("/image/logo2.png")).getImage());
         setUndecorated(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -746,6 +747,11 @@ public class Home extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(204, 204, 204));
         jLabel17.setText("Student's ID");
 
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
         jTextField10.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField10KeyTyped(evt);
@@ -1640,6 +1646,12 @@ public class Home extends javax.swing.JFrame {
         jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(204, 204, 204));
         jLabel27.setText("Student's ID");
+
+        jTextField25.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField25KeyTyped(evt);
+            }
+        });
 
         jButton15.setBackground(new java.awt.Color(102, 102, 102));
         jButton15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -2611,6 +2623,16 @@ public class Home extends javax.swing.JFrame {
     private void jTextScore1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextScore1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextScore1ActionPerformed
+
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
+    private void jTextField25KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField25KeyTyped
+                if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField25KeyTyped
 
     private boolean isNumeric(String s) {
         try {
